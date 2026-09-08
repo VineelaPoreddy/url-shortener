@@ -1,0 +1,6 @@
+[project]
+name = "url-shortener"
+version = "0.1.0"
+dependencies = [
+"fastapi",
+]
