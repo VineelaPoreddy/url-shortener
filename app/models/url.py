@@ -1,5 +1,5 @@
 from datetime import datetime
-from sqlalchemy import Boolean, DateTime, String, func
+from sqlalchemy import Boolean, DateTime, String, func, true
 from sqlalchemy.orm import Mapped, mapped_column
 from app.db.session import Base
 class URL(Base):
@@ -15,5 +15,5 @@ class URL(Base):
         DateTime(timezone=True), nullable=True
     )
     is_active: Mapped[bool] = mapped_column(
-        Boolean, default=True, nullable=False
+        Boolean, server_default=true(), nullable=False
     )
